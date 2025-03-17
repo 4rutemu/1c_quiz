@@ -715,7 +715,7 @@ export default function Home() {
   return (
     <div className="test">
       {showScore ? (
-        <div className="score-section">
+        <div className="score-section" style={{color: score >= 12 ? 'green' : 'red'}}>
           Вы ответили правильно на {score} из {selectedQuestions.length} вопросов!
         </div>
       ) : selectedQuestions.length > 0 ? (
