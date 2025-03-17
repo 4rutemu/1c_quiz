@@ -684,7 +684,7 @@ export default function Home() {
     },
   ];
 
-  const shuffleArray = (array) => {
+  const shuffleArray = (array: any) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -699,7 +699,7 @@ export default function Home() {
   }, []);
 
 
-  const handleAnswerOptionClick = (isCorrect) => {
+  const handleAnswerOptionClick = (isCorrect: any) => {
     if (isCorrect) {
       setScore(score + 1);
     }
@@ -729,7 +729,7 @@ export default function Home() {
             </div>
           </div>
           <div className="answer-section">
-            {selectedQuestions[currentQuestion].answerOptions.map((answerOption, index) => (
+            {selectedQuestions[currentQuestion].answerOptions.map((answerOption: any, index: any) => (
               <button key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
                 {answerOption.answerText}
               </button>
